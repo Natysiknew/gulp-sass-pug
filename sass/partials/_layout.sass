@@ -1,0 +1,40 @@
+//breakpoints
+$S: 480px
+$M: 768px
+$L: 1024px
+$XL: 1280px
+$XXL: 1600px
+
+$HS: 320px
+$HL: 620px
+
+//media  queries
+=MQ($canvas)
+  @if $canvas == S
+    @media only screen and (min-width: $S)
+      @content
+  @else if $canvas == M
+    @media only screen and (min-width: $M)
+      @content
+  @else if $canvas == L
+    @media only screen and (min-width: $L)
+      @content
+  @else if $canvas == XL
+    @media only screen and (min-width: $XL)
+      @content
+  @else if $canvas == XXL
+    @media only screen and (min-width: $XXL)
+      @content
+
+=HEIGHT($screen)
+  @if $screen == HS
+    @media only screen and (min-height: $HS)
+      @content
+  @else if $screen == HL
+    @media only screen and (min-height: $HL)
+      @content
+
+=MAINBREAK($canvas, $screen)
+  @if ($canvas == L and $screen == HL)
+    @media only all and (min-width: L) and (min-height: $HL)
+      @content

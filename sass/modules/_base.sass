@@ -1,0 +1,54 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+button:active, button:focus
+  outline: none !important
+
+button::-moz-focus-inner
+  border: 0 !important
+
+input::-moz-focus-inner
+  border: 0 !important
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+body
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  font-family: $default-font
+  overflow-x: hidden
+
+a
+  text-decoration: none
+  outline: none
+
+.overflow-hidden
+  overflow: hidden !important
+
+.text-replace
+  color: transparent
+  text-indent: 100%
+  overflow: hidden
+  white-space: nowrap
